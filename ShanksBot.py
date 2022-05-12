@@ -8,7 +8,7 @@ import math
 import os
 import random
 
-rawData = open("C:\\Users\laten\Desktop\Projects\Python\Math\primes-to-100k.txt", "r")
+rawData = open("primes-to-100k.txt", "r")
 dataset = rawData.readlines()
 rawData.close()
 
