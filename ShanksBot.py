@@ -23,7 +23,7 @@ def primeReciprocalPeriod(prime):
     # Getting the length of the prime (digits)
     strPrime = str(prime)
     for num in strPrime:
-        primeLength += 1    
+        primeLength += 1
     # Math to calculate the first number (first digit of the quotient)
     # Long Division
     dividend = 10*int(primeLength)
@@ -42,15 +42,18 @@ def primeReciprocalPeriod(prime):
         # Changing the operations performed once the length of the numbers list is 2*prime - 1
         if (len(numbersList) == 2*(prime - 1)):
             # Indexing technique to figure out the length of the reciprocal period
-            index = int(len(numbersList) / 2)
+            if (prime <= 5):
+                index = 1
+            else:
+                index = 2
             while True:
                 # As the value of index decreases, once it reaches a point where the value of index
                 # splits the list into two identical segments, the period has been found
                 if (numbersList[0:index] == numbersList[index:2*index]):
                     return (len(numbersList[0:index]))
                 else:
-                    index -= 1
-        
+                    index += 1
+
 os.system('cls')
 
 print("Welcome to the 'Shanks Bot'")
